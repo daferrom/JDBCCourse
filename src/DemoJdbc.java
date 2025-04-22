@@ -12,8 +12,8 @@ public class DemoJdbc {
             * close
         */
             String url = "jdbc:postgresql://localhost:5432/demo";
-            String username = "postgres";
-            String password = "Francia2024@1234";
+            String username = System.getenv("DB_USER");
+            String password = System.getenv("DB_PASSWORD");
 
 //            Class.forName("org.postgresql.Driver");
             Connection con = DriverManager.getConnection(url,username,password);
